@@ -8,40 +8,95 @@
     <title>KM || Bank</title>
   </head>
   <body>
-    <div class="carousel-container">
-      <div class="carousel-slide">
-        <img
-          src="../dist/img/carousel-img/carousel8.jpg"
-          id="last_clone"
-          alt=""
-        />
-        <img src="../dist/img/carousel-img/carousel1.jpg" alt="" />
-        <img src="../dist/img/carousel-img/carousel2.jpg" alt="" />
-        <img src="../dist/img/carousel-img/carousel3.jpg" alt="" />
-        <img src="../dist/img/carousel-img/carousel4.jpg" alt="" />
-        <img src="../dist/img/carousel-img/carousel5.jpg" alt="" />
-        <img src="../dist/img/carousel-img/carousel6.jpg" alt="" />
-        <img src="../dist/img/carousel-img/carousel7.jpg" alt="" />
-        <img src="../dist/img/carousel-img/carousel8.jpg" alt="" />
-        <img
-          src="../dist/img/carousel-img/carousel1.jpg"
-          id="first_clone"
-          alt=""
-        />
+    <div class="carousel">
+      <button class="carousel__button carousel__button--left">
+        <i class="fas fa-angle-left fa-4x"></i>
+      </button>
+      <div class="carousel__track-container">
+        <ul class="carousel__track">
+          <li class="carousel__slide current-slide">
+            <img
+              class="carousel__images"
+              src="/dist/img/carousel-img/carousel1.jpg"
+              alt=""
+            />
+          </li>
+          <li class="carousel__slide">
+            <img
+              class="carousel__images"
+              src="/dist/img/carousel-img/carousel2.jpg"
+              alt=""
+            />
+          </li>
+          <li class="carousel__slide">
+            <img
+              class="carousel__images"
+              src="/dist/img/carousel-img/carousel3.jpg"
+              alt=""
+            />
+          </li>
+          <li class="carousel__slide">
+            <img
+              class="carousel__images"
+              src="/dist/img/carousel-img/carousel4.jpg"
+              alt=""
+            />
+          </li>
+          <li class="carousel__slide">
+            <img
+              class="carousel__images"
+              src="/dist/img/carousel-img/carousel5.jpg"
+              alt=""
+            />
+          </li>
+          <li class="carousel__slide">
+            <img
+              class="carousel__images"
+              src="/dist/img/carousel-img/carousel6.jpg"
+              alt=""
+            />
+          </li>
+          <li class="carousel__slide">
+            <img
+              class="carousel__images"
+              src="/dist/img/carousel-img/carousel7.jpg"
+              alt=""
+            />
+          </li>
+          <li class="carousel__slide">
+            <img
+              class="carousel__images"
+              src="/dist/img/carousel-img/carousel8.jpg"
+              alt=""
+            />
+          </li>
+        </ul>
+      </div>
+      <button class="carousel__button carousel__button--right">
+        <i class="fas fa-angle-right fa-4x"></i>
+      </button>
+
+      <div class="carousel__nav">
+        <button class="carousel__indicator current-slide"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
       </div>
     </div>
 
-    <button id="prev_btn">Prev</button>
-    <button id="next_btn">Next</button>
-
+    <!--
     <div class="log-in-container">
       <div class="log-in-wrapper">
-        <!-- Button to open the modal login form -->
+        // Button to open the modal login form
         <button onclick="document.getElementById('id01').style.display='block'">
           Login
         </button>
 
-        <!-- The Modal -->
+        // The Modal
         <div id="id01" class="modal">
           <span
             onclick="document.getElementById('id01').style.display='none'"
@@ -50,7 +105,7 @@
             >&times;</span
           >
 
-          <!-- Modal Content -->
+          Modal Content
           <form class="modal-content animate" action="/action_page.php">
             <div class="imgcontainer">
               <img src="img_avatar2.png" alt="Avatar" class="avatar" />
@@ -97,20 +152,20 @@
 
     <div class="signup-container">
       <div class="signup-wrapper">
-        <!-- Button to open the modal -->
-        <button onclick="document.getElementById('id01').style.display='block'">
+        // Button to open the modal
+        <button onclick="document.getElementById('id02').style.display='block'">
           Sign Up
         </button>
 
-        <!-- The Modal (contains the Sign Up form) -->
+        //The Modal (contains the Sign Up form)
         <div id="id02" class="modal">
           <span
-            onclick="document.getElementById('id01').style.display='none'"
+            onclick="document.getElementById('id02').style.display='none'"
             class="close"
             title="Close Modal"
-            >times;</span
+            >&times;</span
           >
-          <form class="modal-content" action="/action_page.php">
+          <form class="modal-content animate" action="/action_page.php">
             <div class="container">
               <h1>Sign Up</h1>
               <p>Please fill in this form to create an account.</p>
@@ -156,9 +211,9 @@
 
               <div class="clearfix">
                 <button
-                  type="button"
-                  onclick="document.getElementById('id01').style.display='none'"
-                  class="cancelbtn"
+                  type="button2"
+                  onclick="document.getElementById('id02').style.display='none'"
+                  class="cancelbtn2"
                 >
                   Cancel
                 </button>
@@ -167,11 +222,58 @@
             </div>
           </form>
         </div>
+        //Section: Information Grid
+        <div class="grid-line"></div>
+        <div class="grid-1-container">
+          <div class="grid-pic-1"></div>
+          <div class="grid-info-1">
+            <h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptates, delectus quos. Accusamus eum atque accusantium!
+            </p>
+          </div>
+          <div class="grid-button-1"></div>
+        </div>
 
-        .
+        <div class="grid-line"></div>
+        <div class="grid-2-container">
+          <div class="grid-pic-2"></div>
+          <div class="grid-info-2">
+            <h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptates, delectus quos. Accusamus eum atque accusantium!
+            </p>
+          </div>
+          <div class="grid-button-2">Learn more</div>
+        </div>
+
+        <div class="grid-line"></div>
+        <div class="grid-3-container">
+          <div class="grid-pic-3"></div>
+          <div class="grid-info-3">
+            <h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptates, delectus quos. Accusamus eum atque accusantium!
+            </p>
+          </div>
+          <div class="grid-button-3 "></div>
+        </div>
       </div>
     </div>
-
+    -->
     <script src="../dist/js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/eb64753d4d.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

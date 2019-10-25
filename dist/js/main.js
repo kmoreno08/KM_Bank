@@ -1,45 +1,41 @@
-// Landing Page Carousel
-const carouselSlide = document.querySelector(".carousel-slide");
-const carouselImages = document.querySelectorAll(".carousel-slide img");
+const track = document.querySelector(".carousel__track");
+const slides = Array.from(track.children);
+const nextButton = document.querySelector(".carousel__button--right");
+const prevButton = document.querySelector(".carousel__button--left");
 
-//Buttons
-const prev_btn = document.querySelector("#prev_btn");
-const next_btn = document.querySelector("#next_btn");
+const dotsNav = document.querySelector(".carousel__nav");
+const dots = Array.from(dotsNav.children);
 
-//Counter
-let counter = 1;
-const size = carouselImages[0].clientWidth;
+const slideWidth = slides[0].getBoundingClientRect().width;
 
-carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+// arrange the slides next to each other
+const setSlidePosition = (slide, index) => {
+  slide.style.left = slideWidth * index + "px";
+};
+slides.forEach(setSlidePosition);
 
-// Button Listeners
-next_btn.addEventListener("click", () => {
-  if (counter >= carouselImages.length - 1) return;
-  carouselSlide.style.transition = "transform 1s ease-in-out";
-  counter++;
-  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+const moveToSlide = (track, currentSlide, targetSlide) => {
+  track.style.transform = "translateX(-" + targetSlide.style.left + ")";
+  currentSlide.classList.remove("current-slide");
+  targetSlide.classList.add("current-slide");
+};
+// Click left, slides left
+prevButton.addEventListener("click", e => {
+  const currentSlide = track.querySelector(".current-slide");
+  const prevSlide = currentSlide.previousElementSibling;
+
+  moveToSlide(track, currentSlide, prevSlide);
 });
 
-prev_btn.addEventListener("click", () => {
-  if (counter <= 0) return;
-  carouselSlide.style.transition = "transform 1s ease-in-out";
-  counter--;
-  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+//Click right, slide right
+nextButton.addEventListener("click", e => {
+  const currentSlide = track.querySelector(".current-slide");
+  const nextSlide = currentSlide.nextElementSibling;
+
+  moveToSlide(track, currentSlide, nextSlide);
 });
 
-carouselSlide.addEventListener("transitionend", () => {
-  if (carouselImages[counter].id === "last_clone") {
-    carouselSlide.style.transition = "none";
-    counter = carouselImages.length - 2;
-    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-  }
-
-  if (carouselImages[counter].id === "first_clone") {
-    carouselSlide.style.transition = "none";
-    counter = carouselImages.length - counter;
-    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-  }
-});
+// click nav indicators, move to slide
 
 //Modal Log in
 
