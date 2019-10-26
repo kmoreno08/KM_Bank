@@ -6,8 +6,8 @@
 
 .carousel {
   position: relative;
-  height: 600px;
-  width: 80%;
+  height: 650px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -18,8 +18,7 @@
 }
 
 .carousel__track-container {
-  background: lightgreen;
-
+  background: #999;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -51,11 +50,13 @@
 }
 
 .carousel__button--left {
-  left: -50px;
+  left: 50px;
+  z-index: 2;
 }
 
 .carousel__button--right {
-  right: -50px;
+  right: 50px;
+  z-index: 2;
 }
 
 .carousel__button img {
@@ -63,22 +64,27 @@
 }
 
 .carousel__nav {
-  background: pink;
   display: flex;
   justify-content: center;
+  padding: 10px 0;
 }
 
 .carousel__indicator {
   border: 0;
   border-radius: 50%;
   width: 14px;
+  height: 14px;
   background: rgba(0, 0, 0, 0.3);
-  padding: 8px 0;
-  margin: 0 10px;
+  margin: 0 12px;
+  cursor: pointer;
 }
 
 .current-slide {
   background: rgba(0, 0, 0, 0.75);
+}
+
+.is-hidden {
+  display: none;
 }
 
 // /* Login Form */
