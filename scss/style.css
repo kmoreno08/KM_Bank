@@ -96,4 +96,196 @@
 .is-hidden {
   display: none;
 }
+
+/* Section: Info Grid */
+.grid-wrapper {
+  width: 70%;
+  height: 150vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+.grid-line {
+  width: 100%;
+  height: 1px;
+  background: black;
+  margin: 40px 0;
+}
+
+.grid-1-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 350px 200px 400px;
+      grid-template-columns: 350px 200px 400px;
+  -ms-grid-rows: 100px 100px 50px;
+      grid-template-rows: 100px 100px 50px;
+      grid-template-areas: "img1 info1 info1" "img1 info1 info1" "img1 button1 .";
+  grid-gap: 20px;
+}
+
+.grid-1-container .grid-pic-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: img1;
+  background-image: url("/dist/img/grid-img/grid-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.grid-1-container .grid-info-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: info1;
+  line-height: 30px;
+  padding: 30px 10px;
+}
+
+.grid-1-container .grid-info-1 p {
+  margin-top: 30px;
+}
+
+.grid-1-container .grid-button-1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: button1;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid-1-container .grid-button-1:hover {
+  background-color: #00526e;
+}
+
+.grid-2-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 350px 400px;
+      grid-template-columns: 200px 350px 400px;
+  -ms-grid-rows: 100px 100px 50px;
+      grid-template-rows: 100px 100px 50px;
+      grid-template-areas: "info2 info2 img2" "info2 info2 img2" "button2 . img2";
+  grid-gap: 20px;
+}
+
+.grid-2-container .grid-pic-2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: img2;
+  background-image: url("/dist/img/grid-img/grid-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.grid-2-container .grid-info-2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: info2;
+  line-height: 30px;
+  padding: 30px 10px;
+}
+
+.grid-2-container .grid-info-2 p {
+  margin-top: 30px;
+}
+
+.grid-2-container .grid-button-2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: button2;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid-2-container .grid-button-2:hover {
+  background-color: #00526e;
+}
+
+.grid-3-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 350px 200px 400px;
+      grid-template-columns: 350px 200px 400px;
+  -ms-grid-rows: 100px 100px 50px;
+      grid-template-rows: 100px 100px 50px;
+      grid-template-areas: "img3 info3 info3" "img3 info3 info3" "img3 button3 .";
+  grid-gap: 20px;
+}
+
+.grid-3-container .grid-pic-3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: img3;
+  background-image: url("/dist/img/grid-img/grid-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.grid-3-container .grid-info-3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: info3;
+  line-height: 30px;
+  padding: 30px 10px;
+}
+
+.grid-3-container .grid-info-3 p {
+  margin-top: 30px;
+}
+
+.grid-3-container .grid-button-3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: button3;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid-3-container .grid-button-3:hover {
+  background-color: #00526e;
+}
 /*# sourceMappingURL=style.css.map */
