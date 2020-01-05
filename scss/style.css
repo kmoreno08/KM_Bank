@@ -140,7 +140,7 @@
   -ms-grid-row-span: 4;
   -ms-grid-column: 1;
   grid-area: img1;
-  background-image: url("../dist/img/grid-img/grid-1.jpg");
+  background-image: url("../img/grid-img/grid-1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -195,7 +195,7 @@
   -ms-grid-row-span: 4;
   -ms-grid-column: 3;
   grid-area: img2;
-  background-image: url("../dist/img/grid-img/grid-1.jpg");
+  background-image: url("../img/grid-img/grid-2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -250,7 +250,7 @@
   -ms-grid-row-span: 4;
   -ms-grid-column: 1;
   grid-area: img3;
-  background-image: url("../dist/img/grid-img/grid-1.jpg");
+  background-image: url("../img/grid-img/grid-3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

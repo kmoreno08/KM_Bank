@@ -1,13 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../scss/style.css" />
-    <title>KM || Bank</title>
-  </head>
-  <body>
+<!--KM_Bank Index.php-->
+<?php
+    require "header.php";
+?>
+
+
+      
+<!-- 
+ <div class="loginbox">
+      <i class="fas fa-user-circle fa-4x"></i>
+      <h1>Login Here</h1>
+    </div>
+	 -->
+	
+   <?php
+        //Logged in will display message. Check if userId is sending any variable back. If so then logged in.
+          if (isset($_SESSION['userId'])){
+            echo '<p class="login-status"> You are logged in!</p>';
+          }
+          // Logged out of website
+          else {
+            echo '<p class="login-status">You are logged out! Test</p>';
+          }
+        
+        ?>
+
     <div class="carousel">
       <button class="carousel__button carousel__button--left is-hidden">
         <i class="fas fa-angle-left fa-4x"></i>
@@ -17,56 +33,56 @@
           <li class="carousel__slide current-slide">
             <img
               class="carousel__images"
-              src="../dist/img/carousel-img/carousel1.jpg"
+              src="img/carousel-img/carousel1.jpg"
               alt=""
             />
           </li>
           <li class="carousel__slide">
             <img
               class="carousel__images"
-              src="../dist/img/carousel-img/carousel2.jpg"
+              src="img/carousel-img/carousel2.jpg"
               alt=""
             />
           </li>
           <li class="carousel__slide">
             <img
               class="carousel__images"
-              src="../dist/img/carousel-img/carousel3.jpg"
+              src="img/carousel-img/carousel3.jpg"
               alt=""
             />
           </li>
           <li class="carousel__slide">
             <img
               class="carousel__images"
-              src="../dist/img/carousel-img/carousel4.jpg"
+              src="img/carousel-img/carousel4.jpg"
               alt=""
             />
           </li>
           <li class="carousel__slide">
             <img
               class="carousel__images"
-              src="../dist/img/carousel-img/carousel5.jpg"
+              src="img/carousel-img/carousel5.jpg"
               alt=""
             />
           </li>
           <li class="carousel__slide">
             <img
               class="carousel__images"
-              src="../dist/img/carousel-img/carousel6.jpg"
+              src="img/carousel-img/carousel6.jpg"
               alt=""
             />
           </li>
           <li class="carousel__slide">
             <img
               class="carousel__images"
-              src="../dist/img/carousel-img/carousel7.jpg"
+              src="img/carousel-img/carousel7.jpg"
               alt=""
             />
           </li>
           <li class="carousel__slide">
             <img
               class="carousel__images"
-              src="../dist/img/carousel-img/carousel8.jpg"
+              src="img/carousel-img/carousel8.jpg"
               alt=""
             />
           </li>
@@ -87,6 +103,23 @@
         <button class="carousel__indicator"></button>
       </div>
     </div>
+
+    <!-- Login -->
+    <div class="loginbox">
+      <i class="fas fa-user-circle fa-4x"></i>
+      <h1>Login Here</h1>
+      <form action="includes/login.inc.php" method="post">
+        <p>Username</p>
+        <input type="text" name="mailuid" placeholder="Enter Username" />
+        <p>Password</p>
+        <input type="password" name="pwd" placeholder="Enter Password" />
+        <input type="submit" name="login-submit" value="Login" />
+        <a href="#">Forgot password?</a><br />
+        <a href="signup.php">Not Enrolled? Sign Up Now.</a>
+      </form>
+    </div>
+
+
 
     <!--  //Section: Information Grid -->
     <br />
@@ -137,52 +170,6 @@
         <div class="grid-button-3 ">Learn more</div>
       </div>
     </div>
-
-    <!-- Login system-->
-    <div class="loginbox">
-      <i class="fas fa-user-circle fa-4x"></i>
-      <h1>Login Here</h1>
-      <form>
-        <p>Username</p>
-        <input type="text" name="" placeholder="Enter Username" />
-        <p>Password</p>
-        <input type="password" name="" placeholder="Enter Password" />
-        <input type="submit" name="" value="Login" />
-        <a href="#">Forgot password?</a><br />
-        <a href="signup.html">Not Enrolled? Sign Up Now.</a>
-      </form>
-    </div>
-
-    <script src="../dist/js/main.js"></script>
-    <script
-      src="https://kit.fontawesome.com/eb64753d4d.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-  <footer>
-    <div class="footer-wrapper">
-      <h2>Connect with us</h2>
-      <div class="icon-wrapper">
-        <a class="footer-btn-icon" href="#">
-          <i class="fab fa-facebook-square fa-2x"></i
-        ></a>
-        <a class="footer-btn-icon" href="#">
-          <i class="fab fa-instagram fa-2x"></i
-        ></a>
-        <a class="footer-btn-icon" href="#">
-          <i class="fab fa-linkedin fa-2x"></i
-        ></a>
-        <a class="footer-btn-icon" href="#">
-          <i class="fab fa-pinterest-square fa-2x"></i
-        ></a>
-        <a class="footer-btn-icon" href="#">
-          <i class="fab fa-twitter-square fa-2x"></i
-        ></a>
-        <a class="footer-btn-icon" href="#">
-          <i class="fab fa-youtube fa-2x"></i
-        ></a>
-      </div>
-      <p>&copy; 2019 KM Corporation. All rights reserved.</p>
-    </div>
-  </footer>
-</html>
+<?php
+  require "footer.php";
+?>
