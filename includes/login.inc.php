@@ -8,6 +8,8 @@ if (isset($_POST['login-submit'])) {
 
     $mailuid = $_POST['mailuid'];
     $password = $_POST['pwd'];
+    $amount = $_POST['amount'];
+
 
     //Check if any field is empty
 if (empty($mailuid) || empty($password))  {
@@ -16,9 +18,10 @@ if (empty($mailuid) || empty($password))  {
    }
    else {
        //Check for user name or email
-       $sql = "SELECT * FROM users WHERE uidUsers=? OR emailUsers=?;";
+       $sql = "SELECT * FROM users WHERE uidUsers=? OR emailUsers=? OR accountAmount=?;";
        //Initialize new statement
        $stmt = mysqli_stmt_init($conn);
+
        // Check if there is an error with sql
        if(!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location: ../index.php?error=sqlerror");
@@ -26,10 +29,11 @@ if (empty($mailuid) || empty($password))  {
        }
 
        else {
-           mysqli_stmt_bind_param($stmt, "ss", $mailuid, $mailuid);
+           mysqli_stmt_bind_param($stmt, "ssi", $mailuid, $mailuid, $amount);
            mysqli_stmt_execute($stmt);
            //Can grab the results
            $result = mysqli_stmt_get_result($stmt);
+
            //Check to see if result is empty or has an result
            if($row = mysqli_fetch_assoc($result)) {
             //See if the password matches with userid or emailid
@@ -43,9 +47,11 @@ if (empty($mailuid) || empty($password))  {
                 session_start();
                 $_SESSION['userId'] = $row['idUsers'];
                 $_SESSION['userUid'] = $row['uidUsers'];
+                $_SESSION['amount'] = $row['accountAmount'];
                 header("Location: ../welcome.php?login=success");
                 exit();
             }
+            //Incase $pwdcheck is not a bool
             else {
                 header("Location: ../index.php?error=elsewrongpwd");
                 exit();
@@ -64,8 +70,9 @@ if (empty($mailuid) || empty($password))  {
 // User did not click on login-submit and got here by other means
 else {
     //Send back to index page page if got there w/out clicking on signup button
-    header("Location: ../index.php");
-    exit();
+    //When logging in this is where it is taking me
+    header("Location: welcome.php?login=success");
+    //exit();
 }
 
 ?>

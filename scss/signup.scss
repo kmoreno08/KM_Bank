@@ -6,21 +6,10 @@
 .bg-img {
   height: 100vh;
   width: 100%;
-  background: url("../img/signup-img/hong-kong-city-2434627.jpg");
+  background: url("../img/signup-img/blue-sky.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom right, #000326, #000214);
-    opacity: 0.6;
-  }
 }
 
 //Login

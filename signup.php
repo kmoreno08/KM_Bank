@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="scss/signup.css" />
-    <title>KM || Bank</title>
+    <title>KM || Signup</title>
   </head>
   <body>
   
@@ -38,8 +38,11 @@ session_start();
                 echo '<p class="signuperror">Username is already taken!</p>';
             }
         }
-        else if ($_GET['signup'] == "success") {
-            echo '<p class="signuperror">Success!</p>';
+        else {
+           //Success statement  -> if ($_GET['signup'] == "success")
+          //  echo '<p class="signuperror">Success!</p>';
+            //header("Location: ../signup.php?error=invalidmailuid");
+            
         }
     ?>
       
@@ -59,7 +62,7 @@ session_start();
           <p>Repeat Password</p>
           <input type="password" name="pwd-repeat" placeholder="Repeat Password" />
           <input type="submit" name="signup-submit" value="Login" />
-          <p class="signuperror"></p>
+         <!-- <p class="signuperror"></p>-->
           <a href="index.php">Already enrolled? Sign in now.</a><br />
         </form>
       </div>
@@ -90,22 +93,22 @@ session_start();
     <div class="footer-wrapper">
       <h2>Connect with us</h2>
       <div class="icon-wrapper">
-        <a class="footer-btn-icon" href="#">
+        <a class="footer-btn-icon" href="https://www.facebook.com">
           <i class="fab fa-facebook-square fa-2x"></i
         ></a>
-        <a class="footer-btn-icon" href="#">
+        <a class="footer-btn-icon" href="https://www.instagram.com">
           <i class="fab fa-instagram fa-2x"></i
         ></a>
-        <a class="footer-btn-icon" href="#">
+        <a class="footer-btn-icon" href="https://www.linkedin.com">
           <i class="fab fa-linkedin fa-2x"></i
         ></a>
-        <a class="footer-btn-icon" href="#">
+        <a class="footer-btn-icon" href="https://www.pinterest.com">
           <i class="fab fa-pinterest-square fa-2x"></i
         ></a>
-        <a class="footer-btn-icon" href="#">
+        <a class="footer-btn-icon" href="https://www.twitter.com">
           <i class="fab fa-twitter-square fa-2x"></i
         ></a>
-        <a class="footer-btn-icon" href="#">
+        <a class="footer-btn-icon" href="https://www.youtube.com">
           <i class="fab fa-youtube fa-2x"></i
         ></a>
       </div>
