@@ -14,7 +14,7 @@
 
 .carousel {
   position: relative;
-  height: 650px;
+  height: 100vh;
   width: 100%;
   margin: 0 auto;
 }
@@ -101,15 +101,13 @@
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  // margin-top: 140px;
 }
 /* Section: Info Grid */
 .grid-wrapper {
-  width: 75%;
-  //height: 75%;//140vh
+  width: 80%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  //justify-content: center;
+  //align-items: center;
   flex-direction: column;
   margin: 0px auto;
 }
@@ -121,14 +119,14 @@
 
 .grid-1-container {
   display: grid;
-  grid-template-columns: 350px 200px 400px;
+  grid-template-columns: 40% 19% 35%; //350 200 400
   grid-template-rows: 100px 50px 40px 50px;
   grid-template-areas:
     "img1 info1 info1"
     "img1 info1 info1"
     "img1 button1 ."
     "img1 . .";
-  grid-gap: 15px;
+  grid-gap: 45px;
 
   .grid-pic-1 {
     grid-area: img1;
@@ -136,14 +134,17 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    //max-width: 100%;
   }
 
   .grid-info-1 {
     grid-area: info1;
-    line-height: 30px;
+    line-height: 40px;
     padding: 30px 10px;
+    font-size: 30px;
     p {
-      margin-top: 30px;
+      margin-top: 40px;
+      font-size: 24px;
     }
   }
 
@@ -167,14 +168,14 @@
 
 .grid-2-container {
   display: grid;
-  grid-template-columns: 200px 350px 400px;
-  grid-template-rows: 100px 50px 40px 50px;
+  grid-template-columns: 19% 35% 40%;
+  grid-template-rows: 100px 60px 40px 50px;
   grid-template-areas:
     "info2 info2 img2"
     "info2 info2 img2"
     "button2 . img2"
     ". . img2";
-  grid-gap: 20px;
+  grid-gap: 45px;
 
   .grid-pic-2 {
     grid-area: img2;
@@ -186,10 +187,12 @@
 
   .grid-info-2 {
     grid-area: info2;
-    line-height: 30px;
+    line-height: 40px;
     padding: 30px 10px;
+    font-size: 30px;
     p {
-      margin-top: 30px;
+      margin-top: 40px;
+      font-size: 24px;
     }
   }
 
@@ -213,14 +216,14 @@
 
 .grid-3-container {
   display: grid;
-  grid-template-columns: 350px 200px 400px;
+  grid-template-columns: 40% 19% 35%;
   grid-template-rows: 100px 50px 40px 50px;
   grid-template-areas:
     "img3 info3 info3"
     "img3 info3 info3"
     "img3 button3 ."
     "img3 . .";
-  grid-gap: 20px;
+  grid-gap: 45px;
 
   .grid-pic-3 {
     grid-area: img3;
@@ -232,13 +235,14 @@
 
   .grid-info-3 {
     grid-area: info3;
-    line-height: 30px;
+    line-height: 40px;
     padding: 30px 10px;
+    font-size: 30px;
     p {
-      margin-top: 30px;
+      margin-top: 40px;
+      font-size: 24px;
     }
   }
-
 
   .grid-button-3 {
     grid-area: button3;
@@ -258,69 +262,11 @@
   }
 }
 
-//Footer
-footer {
-  height: 20vh;
-  width: 100%;
-  //margin-top: 95px;
-  //bottom: 0;
-  background-color: #008cba;
-  color: white;
-
-  p {
-    font-size: 12px;
-  }
-}
-
-.footer-wrapper {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  align-items: center;
-  flex-direction: column;
-  line-height: 35px;
-}
-
-.icon-wrapper {
-  display: flex;
-  justify-content: space-between;
-
-  .fab {
-    cursor: pointer;
-    background: #f1f1f1;
-    border-radius: 30%;
-  }
-}
-.footer-btn-icon {
-  margin: 0 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f1f1f1;
-  border-radius: 30%;
-  width: 45px;
-  height: 45px;
-  box-shadow: 0 5px 15px -5px #00000070;
-  color: #008cba;
-  position: relative;
-  text-decoration: none;
-
-  i {
-    line-height: 45px;
-    font-size: 26px;
-    transition: 0.2s linear;
-  }
-  &:hover i {
-    transform: scale(1.3);
-    line-height: 20px;
-  }
-}
-
 // New Login
 .loginbox {
-  width: 320px;
-  height: 420px;
-  background: #00207f; //#00207f <-Dark blue #008cba <-Teal
+  width: 350px;
+  height: 450px;
+  background: #00207f;
   color: #fff;
   top: 50%;
   left: 50%;
@@ -373,10 +319,12 @@ input[type="password"] {
   border: none;
   outline: none;
   height: 40px;
-  background: #008cba; //#00ba8b <- Teal 3rd primary color
+  background: #008cba;
   color: #fff;
   font-size: 18px;
   border-radius: 20px;
+  margin-top: 9px;
+  margin-bottom: 30px;
 }
 .loginbox input[type="submit"]:hover {
   cursor: pointer;
@@ -386,8 +334,7 @@ input[type="password"] {
 
 .loginbox a {
   text-decoration: none;
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 18px;
   color: darkgrey;
 }
 
@@ -400,32 +347,34 @@ input[type="password"] {
   background: #f5f5f5;
   padding-bottom: 20px;
   margin-top: 30px;
-  // height: 40%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 .news-grid-container {
   width: 80%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  //align-items: center;
   flex-direction: column;
   margin: 0 auto;
 }
 
 .news-title-wrapper {
   width: 100%;
-  //height: 130px;
   text-align: left;
   font-size: 40px;
   padding: 20px 0;
-  //margin-top: 5px;
+  //margin-left: 85px;
 }
 
 .news-grid-wrapper {
-  width: 100%;
+  //margin-left: 85px;
+  width: 80%;
   display: grid;
-  margin: 0 auto;
+  //margin: 0 auto;
 
-  grid-template-columns: 350px 350px 350px;
+  grid-template-columns: 435px 435px 435px;
   grid-template-rows: 200px;
   grid-template-areas:
     "news-grid-1-container news-grid-2-container news-grid-3-container"
@@ -435,7 +384,7 @@ input[type="password"] {
 
 .news-grid-1-container {
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: 350px;
   grid-template-rows: 200px;
   grid-template-areas:
     "news-grid-pic-1"
@@ -453,14 +402,14 @@ input[type="password"] {
 }
 .news-grid-info-1 {
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 16px;
   color: black;
   text-align: center;
 }
 
 .news-grid-2-container {
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: 350px;
   grid-template-rows: 200px;
   grid-template-areas:
     "news-grid-pic-2"
@@ -477,7 +426,7 @@ input[type="password"] {
   background-size: cover;
 }
 .news-grid-info-2 {
-  font-size: 12px;
+  font-size: 16px;
   margin-top: 10px;
   color: black;
   text-align: center;
@@ -485,7 +434,7 @@ input[type="password"] {
 
 .news-grid-3-container {
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: 350px;
   grid-template-rows: 200px;
   grid-template-areas:
     "news-grid-pic-3"
@@ -502,7 +451,7 @@ input[type="password"] {
   background-size: cover;
 }
 .news-grid-info-3 {
-  font-size: 12px;
+  font-size: 16px;
   color: black;
   margin-top: 10px;
   text-align: center;
@@ -510,7 +459,7 @@ input[type="password"] {
 
 .news-grid-4-container {
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: 350px;
   grid-template-rows: 200px;
   grid-template-areas:
     "news-grid-pic-4"
@@ -527,7 +476,7 @@ input[type="password"] {
   background-size: cover;
 }
 .news-grid-info-4 {
-  font-size: 12px;
+  font-size: 16px;
   color: black;
   margin-top: 10px;
   text-align: center;
@@ -535,7 +484,7 @@ input[type="password"] {
 
 .news-grid-5-container {
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: 350px;
   grid-template-rows: 200px;
   grid-template-areas:
     "news-grid-pic-5"
@@ -552,7 +501,7 @@ input[type="password"] {
   background-size: cover;
 }
 .news-grid-info-5 {
-  font-size: 12px;
+  font-size: 16px;
   color: black;
   margin-top: 10px;
   text-align: center;
@@ -560,7 +509,7 @@ input[type="password"] {
 
 .news-grid-6-container {
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: 350px;
   grid-template-rows: 200px;
   grid-template-areas:
     "news-grid-pic-6"
@@ -577,8 +526,527 @@ input[type="password"] {
   background-size: cover;
 }
 .news-grid-info-6 {
-  font-size: 12px;
+  font-size: 16px;
   color: black;
   margin-top: 10px;
   text-align: center;
+}
+
+//Footer
+footer {
+  height: 20vh;
+  width: 100%;
+  background-color: #008cba;
+  color: white;
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  line-height: 35px;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .fab {
+    cursor: pointer;
+    background: #f1f1f1;
+    border-radius: 30%;
+  }
+}
+.footer-btn-icon {
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 30%;
+  width: 45px;
+  height: 45px;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #008cba;
+  position: relative;
+  text-decoration: none;
+
+  i {
+    line-height: 45px;
+    font-size: 26px;
+    transition: 0.2s linear;
+  }
+  &:hover i {
+    transform: scale(1.3);
+    line-height: 20px;
+  }
+}
+
+//Media query
+/* Medium devices (landscape tablets, up to 768px) */
+@media only screen and (max-width: 768px) {
+  .carousel {
+    position: relative;
+    height: 65vh;
+    width: 100%;
+    margin: 0 auto;
+  }
+  //login box
+  .loginbox {
+    width: 320px;
+    height: 420px;
+    background: #00207f;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -95%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+  }
+  //grid-wrapper
+  .grid-wrapper {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+  }
+  //grid info
+  .grid-1-container {
+    display: grid;
+    grid-template-columns: 55% 20% 40%;
+    grid-template-rows: 50px 160px 40px 60px;
+    grid-template-areas:
+      "img1 info1 info1"
+      "img1 info1 info1"
+      "img1 button1 ."
+      "img1 . .";
+    grid-gap: 25px;
+
+    .grid-info-1 {
+      grid-area: info1;
+      line-height: 40px;
+      padding: 30px 10px;
+      font-size: 24px;
+      p {
+        margin-top: 20px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .grid-2-container {
+    display: grid;
+    grid-template-columns: 20% 40% 55%;
+    grid-template-rows: 40px 115px 30px 40px;
+    grid-template-areas:
+      "info2 info2 img2"
+      "info2 info2 img2"
+      ". . img2"
+      "button2 . img2";
+    grid-gap: 25px;
+
+    .grid-info-2 {
+      grid-area: info2;
+      line-height: 40px;
+      padding: 30px 10px;
+      font-size: 24px;
+      p {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .grid-3-container {
+    display: grid;
+    grid-template-columns: 55% 20% 40%;
+    grid-template-rows: 50px 100px 100px 40px;
+    grid-template-areas:
+      "img3 info3 info3"
+      "img3 info3 info3"
+      "img3 . ."
+      "img3 button3 .";
+    grid-gap: 25px;
+  }
+
+  //news-grid
+  .news-title-wrapper {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0;
+  }
+  .news-grid-wrapper {
+    width: 100%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 200px;
+    grid-template-areas:
+      "news-grid-1-container news-grid-2-container"
+      "news-grid-3-container news-grid-4-container"
+      "news-grid-5-container news-grid-6-container";
+    row-gap: 75px;
+  }
+
+  .news-grid-1-container {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 200px;
+    grid-template-areas:
+      "news-grid-pic-1"
+      "news-grid-pic-1"
+      "news-grid-pic-1"
+      "news-grid-info-1";
+  }
+
+  .news-grid-pic-1 {
+    grid-area: news-grid-pic-1;
+    background-image: url("../img/news-grid/grid-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .news-grid-info-1 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+  }
+
+  .news-grid-2-container {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 200px;
+    grid-template-areas:
+      "news-grid-pic-2"
+      "news-grid-pic-2"
+      "news-grid-pic-2"
+      "news-grid-info-2";
+    margin-left: 80px;
+  }
+
+  .news-grid-pic-2 {
+    grid-area: news-grid-pic-2;
+    background-image: url("../img/news-grid/grid-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .news-grid-info-2 {
+    font-size: 14px;
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+  }
+
+  .news-grid-3-container {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 200px;
+    grid-template-areas:
+      "news-grid-pic-3"
+      "news-grid-pic-3"
+      "news-grid-pic-3"
+      "news-grid-info-3";
+  }
+
+  .news-grid-pic-3 {
+    grid-area: news-grid-pic-3;
+    background-image: url("../img/news-grid/grid-3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .news-grid-info-3 {
+    font-size: 14px;
+    color: black;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .news-grid-4-container {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 240px;
+    grid-template-areas:
+      "news-grid-pic-4"
+      "news-grid-pic-4"
+      "news-grid-pic-4"
+      "news-grid-info-4";
+    margin-left: 80px;
+  }
+
+  .news-grid-pic-4 {
+    grid-area: news-grid-pic-4;
+    background-image: url("../img/news-grid/grid-4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .news-grid-info-4 {
+    font-size: 14px;
+    color: black;
+    text-align: center;
+  }
+
+  .news-grid-5-container {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 200px;
+    grid-template-areas:
+      "news-grid-pic-5"
+      "news-grid-pic-5"
+      "news-grid-pic-5"
+      "news-grid-info-5";
+  }
+
+  .news-grid-pic-5 {
+    grid-area: news-grid-pic-5;
+    background-image: url("../img/news-grid/grid-5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .news-grid-info-5 {
+    font-size: 14px;
+    color: black;
+    text-align: center;
+  }
+
+  .news-grid-6-container {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 200px;
+    grid-template-areas:
+      "news-grid-pic-6"
+      "news-grid-pic-6"
+      "news-grid-pic-6"
+      "news-grid-info-6";
+    margin-left: 80px;
+  }
+
+  .news-grid-pic-6 {
+    grid-area: news-grid-pic-6;
+    background-image: url("../img/news-grid/grid-6.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .news-grid-info-6 {
+    font-size: 14px;
+    color: black;
+    text-align: center;
+  }
+
+  //Footer
+  footer {
+    height: 10vh;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .grid-wrapper {
+    width: 80%;
+  }
+  //carousel
+  .carousel {
+    height: 100vh;
+  }
+  .carousel_button--left,
+  .carousel_button--right,
+  .carousel__nav,
+  .carousel__button {
+    display: none;
+  }
+
+  //login
+  // New Login
+  .loginbox {
+    width: 350px;
+    height: 450px;
+    background: #00207f;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+  }
+
+  //grid
+  .grid-1-container {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 20% 30% 30% 15%;
+    grid-template-areas:
+      "img1 info1 info1"
+      "img1 info1 info1"
+      "img1 . ."
+      "img1 button1 .";
+    grid-gap: 5px;
+
+    .grid-pic-1 {
+      grid-area: img1;
+      background-position: 65% 60%;
+    }
+
+    .grid-info-1 {
+      grid-area: info1;
+      line-height: 30px;
+      font-size: 20px;
+      p {
+        margin-top: 20px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .grid-2-container {
+    display: grid;
+    grid-template-columns: 22% 22% 55%;
+    grid-template-rows: 40% 24% 20% 13%; //100px 60px 50px 40px;
+    grid-template-areas:
+      "info2 info2 img2"
+      "info2 info2 img2"
+      ". . img2"
+      "button2 . img2";
+    grid-gap: 5px;
+
+    .grid-pic-2 {
+      grid-area: img2;
+      background-position: 71% 60%;
+    }
+
+    .grid-info-2 {
+      grid-area: info2;
+      line-height: 25px;
+      font-size: 20px;
+      p {
+        margin-top: 15px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .grid-3-container {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 20% 30% 30% 15%;
+    grid-template-areas:
+      "img3 info3 info3"
+      "img3 info3 info3"
+      "img3 . ."
+      "img3 button3 .";
+    grid-gap: 5px;
+
+    .grid-info-3 {
+      grid-area: info3;
+      line-height: 25px;
+      font-size: 20px;
+      p {
+        margin-top: 20px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .news-title-wrapper {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0;
+  }
+  .news-grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .news-grid-1-container {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 200px;
+    grid-template-areas:
+      "news-grid-pic-1"
+      "news-grid-pic-1"
+      "news-grid-pic-1"
+      "news-grid-info-1";
+  }
+
+  .news-grid-2-container {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 200px;
+    grid-template-areas:
+      "news-grid-pic-2"
+      "news-grid-pic-2"
+      "news-grid-pic-2"
+      "news-grid-info-2";
+    margin: 0px;
+  }
+
+  .news-grid-3-container {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 200px;
+    grid-template-areas:
+      "news-grid-pic-3"
+      "news-grid-pic-3"
+      "news-grid-pic-3"
+      "news-grid-info-3";
+  }
+
+  .news-grid-4-container {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 200px;
+    grid-template-areas:
+      "news-grid-pic-4"
+      "news-grid-pic-4"
+      "news-grid-pic-4"
+      "news-grid-info-4";
+    margin: 0px;
+  }
+
+  .news-grid-5-container {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 200px;
+    grid-template-areas:
+      "news-grid-pic-5"
+      "news-grid-pic-5"
+      "news-grid-pic-5"
+      "news-grid-info-5";
+  }
+
+  .news-grid-6-container {
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: 200px;
+    grid-template-areas:
+      "news-grid-pic-6"
+      "news-grid-pic-6"
+      "news-grid-pic-6"
+      "news-grid-info-6";
+    margin: 0px;
+  }
+
+  footer {
+    display: none;
+  }
 }

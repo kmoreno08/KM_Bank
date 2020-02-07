@@ -15,8 +15,6 @@
         
         ?> -->
 
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -127,7 +125,6 @@
           }
         }
         ?>
-        <!--<a href="reset-password.php">Forgot password?</a><br />-->
         <a href="signup.php">Not Enrolled? Sign Up Now.</a>
       </form>
     </div>
@@ -139,11 +136,10 @@
         <div class="grid-pic-1"></div>
         <div class="grid-info-1">
           <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe.
+            Stay prepared for this tax season
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptates, delectus quos. Accusamus eum atque accusantium!
+            Check the tax center to see mailing dates and other important information.
           </p>
         </div>
         <div class="grid-button-1" onclick="location.href='http://localhost/KM_bank/index.php';">Learn more</div>
@@ -154,11 +150,10 @@
         <div class="grid-pic-2"></div>
         <div class="grid-info-2">
           <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe.
+          Get access to cash for your business
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptates, delectus quos. Accusamus eum atque accusantium!
+          Be ready for whatever comes your way with a KM Bank Business line of credit.
           </p>
         </div>
         <div class="grid-button-2" onclick="location.href='http://localhost/KM_bank/index.php';">Learn more</div>
@@ -169,11 +164,10 @@
         <div class="grid-pic-3"></div>
         <div class="grid-info-3">
           <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe.
+            Its time to do Money
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptates, delectus quos. Accusamus eum atque accusantium!
+            KM Bank, also a pioneer of commission-free investing, gives you more ways to make your money work harder.
           </p>
         </div>
           <div class="grid-button-3" onclick="location.href='http://localhost/KM_bank/index.php';">
@@ -192,7 +186,8 @@
       </div>
         <div class="news-grid-wrapper">
           <div class="news-grid-1-container">
-          <div class="news-grid-pic-1"></div>
+          <div class="news-grid-pic-1">
+          </div>
           <div class="news-grid-info-1">
             <h2>
               What business leaders expect in 2020
@@ -227,7 +222,7 @@
           <div class="news-grid-pic-4"></div>
           <div class="news-grid-info-4">
             <h2>
-              Which cryptocurrency is best for your retirement?
+              Which cryptocurrency is best for retirement?
             </h2>
           </div>
         </div>

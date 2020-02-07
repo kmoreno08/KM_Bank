@@ -39,9 +39,6 @@ session_start();
             }
         }
         else {
-           //Success statement  -> if ($_GET['signup'] == "success")
-          //  echo '<p class="signuperror">Success!</p>';
-            //header("Location: ../signup.php?error=invalidmailuid");
             
         }
     ?>
@@ -67,22 +64,6 @@ session_start();
         </form>
       </div>
     </div>
-	
-	
-	
-	
-	<!-- Use as reference. form class -->
-	<!--<form class="form-signup" action="includes/signup.inc.php" method="post">
-        <input type="text" name="uid" placeholder="Username">
-        <input type="text" name="mail" placeholder="E-mail">
-        <input type="password" name="pwd" placeholder="Password">
-        <input type="password" name="pwd-repeat" placeholder="Repeat Password">
-        <button type="submit" name="signup-submit">Signup</button>
-
-       </form>
-        </section>
-        </div>
-    </main> -->
 
     <script
       src="https://kit.fontawesome.com/eb64753d4d.js"
