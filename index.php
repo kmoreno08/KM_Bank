@@ -1,20 +1,7 @@
 <!--KM_Bank Index.php-->
 <?php
-    session_start();
+    //session_start();
 ?>
-	
-   <!-- <?php
-        //Logged in will display message. Check if userId is sending any variable back. If so then logged in.
-          if (isset($_SESSION['userId'])){
-           // echo '<p class="login-status"> You are logged in!</p>';
-          }
-          // Logged out of website
-          else {
-            echo '<p class="login-status">You are logged out! Test</p>';
-          }
-        
-        ?> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>

@@ -1167,8 +1167,5 @@ footer p {
         grid-template-areas: "news-grid-pic-6" "news-grid-pic-6" "news-grid-pic-6" "news-grid-info-6";
     margin: 0px;
   }
-  footer {
-    display: none;
-  }
 }
 /*# sourceMappingURL=style.css.map */

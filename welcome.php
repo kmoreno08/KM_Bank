@@ -1,13 +1,8 @@
 <?php
-    //include('includes/login.inc.php');
     include('includes/dbh.inc.php'); 
     session_start();
- ?>
-   
-
-   <?php 
-
-
+?>
+<?php
  //Check for account amount change
 if(isset($_POST['amount-submit'])){
   //include('includes/dbh.inc.php'); 
@@ -22,13 +17,12 @@ if(isset($_POST['amount-submit'])){
   if(mysqli_query($conn, $query)){
   
     $_SESSION['amount'] = $amount;
-    header('Location: http://localhost/KM_bank/welcome.php?login=success');
+    //header('Location: http://localhost/KM_bank/welcome.php?login=success');
     
   } else {
     echo 'ERROR: '. mysqli_error($conn);
   }
 }
-
 ?>
 <html>
 <!DOCTYPE html>
@@ -84,6 +78,6 @@ if(isset($_POST['amount-submit'])){
          ?>
       </br>
         </div>
-      <?php
+<?php
   require "footer.php";
 ?>

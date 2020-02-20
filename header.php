@@ -1,9 +1,8 @@
 <!--KM_Bank Header.php-->
-<?php
+<!--<?php
 //Start up PHP session
-session_start();
-
-?>
+//session_start();
+?>-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,9 +13,8 @@ session_start();
     <title>KM || Bank</title>
   </head>
   <body>
-  
-   <!--Use PHP to show different buttons at different states -->
-        <?php 
+   <!--Use PHP to show different buttons at different states 
+        
             //Logged in - will show logout form
 			// Still needs to be created with deposit and logout button
          //   if (isset($_SESSION['userId'])){
@@ -41,4 +39,7 @@ session_start();
     //</div>';
       //      }
 
-        ?> 
+	  
+	  If need back put php tags 
+	  -->
+        

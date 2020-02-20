@@ -1,4 +1,3 @@
-//KM_Bank signup
 <?php
 //User tried to signup using the sign up form
 if(isset($_POST['signup-submit'])){
@@ -12,29 +11,29 @@ if(isset($_POST['signup-submit'])){
 
   //Check if any field is empty
   if (empty($username) || empty($email) || empty($password) || empty($passwordRepeat))  {
-  header("Location: ../signup.php?error=emptyfields&uid=".$username."&mail=".$email);
+  //header("Location: ../signup.php?error=emptyfields&uid=".$username."&mail=".$email);
   exit();
   }
   //Check for valid mail and Username
   else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-      header("Location: ../signup.php?error=invalidmailuid");
+      //header("Location: ../signup.php?error=invalidmailuid");
       exit();
   }
 
   //Check for valid email
   else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      header("Location: ../signup.php?error=invalidmail&uid=".$username);
+     // header("Location: ../signup.php?error=invalidmail&uid=".$username);
       exit();
   }
 
   //Check for valid Username
   else if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-      header("Location: ../signup.php?error=invaliduid&mail=".$email);
+      //header("Location: ../signup.php?error=invaliduid&mail=".$email);
       exit();
   }
   //Check if passwords are the same, if not error
   else if ($password !== $passwordRepeat) {
-      header("Location: ../signup.php?error=passwordcheck&uid=".$username."&mail=".$email);
+      //header("Location: ../signup.php?error=passwordcheck&uid=".$username."&mail=".$email);
       exit();
   }
   else {
@@ -46,7 +45,7 @@ if(isset($_POST['signup-submit'])){
 
       //Check error - see if connection fail
         if(!mysqli_stmt_prepare($stmt, $sql)) {
-          header("Location: ../signup.php?error=sqlerror");
+          //header("Location: ../signup.php?error=sqlerror");
       exit();
       }
       else {
@@ -61,7 +60,7 @@ if(isset($_POST['signup-submit'])){
 
 
           if ($resultcheck > 0) {
-            header("Location: ../signup.php?error=usertaken&mail=".$email);
+            //header("Location: ../signup.php?error=usertaken&mail=".$email);
             exit();
           } 
           else {
@@ -74,7 +73,7 @@ if(isset($_POST['signup-submit'])){
 
               //Check if error in SQL, If no error then insert info.
               if (!mysqli_stmt_prepare($stmt, $sql)) {
-                header("Location: ../signup.php?error=sqlerror");
+                //header("Location: ../signup.php?error=sqlerror");
                 exit();
               } // No SQL Error, insert info
               else {
@@ -100,6 +99,6 @@ if(isset($_POST['signup-submit'])){
 }
 else {
     //Send back to signup page if got there w/out clicking on signup button
-    header("Location: ../signup.php");
+    //header("Location: ../signup.php");
     exit();
 }
